@@ -40,10 +40,29 @@ function generatePassword() {
     passwordLength = prompt("You must choose a password between 8 to 128 characters");
     console.log("Password length " + passwordLength);
 
-    else {
+  }  else {
       confirmLowerCase = confirm("will this password contain lower case letters?");
       console.log("Lower case " + confirmLowerCase);
+      confirmUpperCase = confirm("Will this password contain upper case letters?");
+      console.log("Upper case " + confirmUpperCase);
+      confirmNumericCharacter = confirm("Will this password contain Numbers?");
+      console.log("Number " + confirmNumber);
+      confirmSpecialCharacter = confirm("Will this password contain special charachters?");
+      console.log("Special Character " confirmSpecialCharacter);
     }
-  }
+};
+
+var passwordBlank = [];
+
+for (var i=0; i < passwordLength; i++) {
+  var allChoices = userChoices[Math.floor(Math.random() * userChoices.length)];
+  passwordBlank.push(allChoices);
+  console.log(allChoices);
+}
+
+var password = passwordBlank.join(""); {
+console.log("Your password is: " + password);
+return password;
+
 
 }
